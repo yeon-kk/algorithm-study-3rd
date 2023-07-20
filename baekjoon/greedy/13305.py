@@ -11,14 +11,13 @@
     #     totalPrice += localMin * road[pIdx]
 N=input()
 road=list(map(int,input().split()))
-price=list(map(int,input().split()))
+prices=list(map(int,input().split()))
 
 road.append(0)
 totalPrice = 0
-localMin = price[0]
-for pIdx, item in enumerate(price):
-    if localMin > item:
-        localMin = price[pIdx]
+localMin = prices[0]
+for pIdx, price in enumerate(prices):
+    if localMin > price:
+        localMin = price
     totalPrice += localMin * road[pIdx]
 print(totalPrice)
-
